@@ -11,4 +11,13 @@ Use file in directory like
 0 back.png
 ```
 
-0 index - back card. 
+0 index - back card.
+
+## Example
+/cards
+| builder
+| hello.png
+
+builder: `15 hello.png`
+
+./gradlew run --args="/cards/" 
