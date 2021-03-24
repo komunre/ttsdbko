@@ -11,6 +11,9 @@ public class DeckLoader {
     String directory;
     BufferedImage[] images = new BufferedImage[7 * 10];
     void load(String dir){
+        if (dir.charAt(dir.length() - 1) != '/'){
+            dir += "/";
+        }
         directory = dir;
         File builder = new File(directory + "builder");
         int index = 0;
