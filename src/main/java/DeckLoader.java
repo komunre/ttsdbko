@@ -27,8 +27,13 @@ public class DeckLoader {
                     System.out.println("Syntax error");
                 }
                 File imageFile = new File(directory + splitted[1]);
+                System.out.println("Adding " + splitted[1]);
                 try {
                     BufferedImage image = ImageIO.read(imageFile);
+                    if (index + counter - 1 > 68){
+                        System.out.println("Maximum cards in deck 69");
+                        return;
+                    }
                     if (counter != 0) {
                         for (int x = 0; x < counter; x++) {
                             images[index] = image;
